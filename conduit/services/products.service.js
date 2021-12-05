@@ -44,10 +44,7 @@ module.exports = {
 			},
 			async handler(ctx) {
 				let entity = ctx.params.product;
-				console.log("antes");
 				await this.validateEntity(entity);
-				console.log("passou");
-
 				entity.createdAt = new Date();
 				entity.updatedAt = new Date();
 
