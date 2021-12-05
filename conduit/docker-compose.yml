@@ -91,6 +91,18 @@ services:
       - redis
       - mongo
 
+  products:
+    build:
+      context: .
+    image: conduit
+    env_file: docker-compose.env
+    environment:
+      SERVICES: products
+    links:
+      - mongo
+    depends_on:
+      - mongo
+
   redis:
     image: redis:alpine
 

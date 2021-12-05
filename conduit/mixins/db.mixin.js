@@ -5,7 +5,7 @@ const mkdir = require("mkdirp").sync;
 
 const DbService = require("moleculer-db");
 
-module.exports = function (collection) {
+module.exports = function(collection) {
 	if (process.env.MONGO_URI) {
 		// Mongo adapter
 		const MongoAdapter = require("moleculer-db-adapter-mongo");
